@@ -96,9 +96,7 @@ function reproducir(index){
   let src;
 
   if (servidor === "ody" && ody){
-    const url = new URL(ody);
-    url.searchParams.set("autoplay", "true");
-    src = url.toString();
+    src = ody + "?autoplay=true";
   }else{
     src = `https://ok.ru/videoembed/${id}?nochat=1&autoplay=1&hd=1`;
   }
