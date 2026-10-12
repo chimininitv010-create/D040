@@ -1,6 +1,6 @@
 /* ================= SERVIDOR ================= */
 
-let servidorActual = localStorage.getItem("srv") || "ody";
+let servidorActual = localStorage.getItem("srv") || "ok";
 
 const srvOk  = document.getElementById("srvOk");
 const srvOdy = document.getElementById("srvOdy");
@@ -96,7 +96,7 @@ function reproducir(index){
   let src;
 
   if (servidor === "ody" && ody){
-    src = ody + "?autoplay=true";
+    src = `https://ok.ru/videoembed/${ody}?nochat=1&autoplay=1&hd=1`;
   }else{
     src = `https://ok.ru/videoembed/${id}?nochat=1&autoplay=1&hd=1`;
   }
